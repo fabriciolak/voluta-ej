@@ -8,23 +8,30 @@ body {
   background-color: #F3E9DC;
 }
 
+header .menu-hidden {
+  display: none;
+}
+
 header {
-  width: 100%;
+  min-width: 100%;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #F3E9DC;
+
+  padding: 0 24px;
 }
 
 header > nav > ul {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  gap: 100px;
 }
 
 header > nav > ul > li {
-  margin: 0 100px;
   list-style: none;
 }
 
@@ -50,9 +57,6 @@ section.hero {
   background-color: #5A3A22;
 }
 
-section.hero .hero_message {
-  padding-left: 10%;
-}
 
 section.hero .hero_message h2 {
   font-family: 'Vina Sans';
@@ -92,6 +96,17 @@ section.hero .img img{
   object-fit: cover;
 }
 
+section.hero .hero_message {
+  padding-left: 30%;
+}
+
+section.hero .hero_message {
+  display: flex;
+  align-items: flex-start;
+  align-self: flex-start;
+  flex-direction: column;
+}
+
 section.hero .hero_message button {
   width: 317px;
   height: 64px;
@@ -122,6 +137,7 @@ section.about {
 
 section.about .about_message {
   width: 990px;
+  max-width: 90%;
   text-align: center;
 }
 
@@ -167,6 +183,7 @@ section.features div > img {
 
 section.features .features_message {
   width: 737px;
+  max-width: 90%;
 }
 
 section.features .features_message h2 {
@@ -182,6 +199,7 @@ section.features .features_message h2 {
 
 section.features .features_message p {
   width: 688px;
+  max-width: 100%;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
@@ -195,7 +213,9 @@ section.features .features_message p {
 
 section.products {
   width: 100%;
-  height: 1040px;
+  height: auto;
+  min-height: 1040px;
+  padding: 80px 0;
 
   display: flex;
   justify-content: center;
@@ -219,6 +239,7 @@ section.products h2 {
 
 section.products p {
   width: 482px;
+  max-width: 90%;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
@@ -237,11 +258,12 @@ section.products .products_grid {
   align-items: center;
   flex-direction: row;
   gap: 64px;
+  flex-wrap: wrap;
 }
 
 section.products .products_grid-product {
   width: 317px;
-  height: 428px;
+  height: auto;
   text-align: left;
 }
 
@@ -253,6 +275,7 @@ section.products .products_grid-product p {
   letter-spacing: -0.027em;
   color: #D0AD64;
   padding-top: 16px;
+  margin-bottom: 0;
 
   text-align: left;
 }
@@ -278,7 +301,8 @@ section.products button {
 
 section.contact {
   width: 100%;
-  height: 788px;
+  height: auto;
+  min-height: 788px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -288,16 +312,20 @@ section.contact {
 
 section.contact .contact_image {
   height: 788px;
+  flex: 1;
 }
 
 section.contact .contact_image img {
   height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 section.contact .contact_form {
   width: 100%;
   height: 100%;
   padding-top: 95px;
+  flex: 1;
 }
 
 section.contact .contact_form > h2 {
@@ -341,6 +369,7 @@ section.contact .contact_form .contact_form-item > label {
 
 section.contact .contact_form-item > input, textarea {
   width: 354px;
+  max-width: 100%;
   height: 48px;
   padding: 4px 12px;
   background-color: rgba(122, 122, 122, 0.2); 
@@ -410,6 +439,7 @@ section.contact .contact_form-item-checkbox input[type="checkbox"]:checked {
 
 section.contact .contact_form > form > button {
   width: 354px;
+  max-width: 100%;
   height: 48px;
   background-color: rgba(122, 122, 122, 0.2); 
   border: 1px solid rgba(122, 122, 122, 0.6); 
@@ -489,6 +519,16 @@ footer.footer .menu-copyright nav ul {
   list-style: none;
 }
 
+footer.footer .menu-copyright span {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.027em;
+  color: #5A3A22;
+}
+
 
 footer.footer .menu-copyright nav ul li a {
   font-family: 'Inter';
@@ -510,9 +550,6 @@ footer.footer .social-media {
   gap: 16px;
 }
 
-
-/* TODO: Change this later */
-
 section.image_break {
   width: 100%;
   height: 433px;
@@ -520,6 +557,158 @@ section.image_break {
 }
 
 section.image_break .img img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
+@media screen and (max-width: 1024px) {
+  header {
+    padding: 0 24px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header nav ul li {
+    display: none;
+  }
+
+  header > nav > ul {
+    flex-wrap: wrap;
+    display: hidden;
+  }
+
+  header .menu-hidden {
+    display: block;
+  }
+
+  header img {
+    height: 64px;
+  }
+
+  header > nav > ul > li {
+    margin: 0 40px;
+  }
+
+  section.hero .hero_message {
+    padding-left: 10%;
+  }
+
+  section.hero .hero_message h2 {
+    line-height: 1.0;
+  }
+
+  section.features {
+    flex-direction: column;
+    height: auto;
+  }
+
+  section.features div > img {
+    height: auto;
+    max-height: 380px;
+    object-fit: fill;
+  }
+
+  section.features .features_message h2 {
+    text-align: center;
+  }
+
+  section.features .features_message p {
+    margin-top: 30px;
+    margin-inline: auto;
+  }
+
+  section.contact {
+    gap: 40px;
+  }
+
+  section.contact .contact_image {
+    display: none; /* Ocultar imagem de contato em telas menores para melhor uso do espaço, ou ajustar flex-direction */
+  }
+
+  section.contact .contact_form {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer.footer {
+    padding: 40px 50px;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  footer.footer .logo-info {
+    align-self: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer.footer .menu-copyright {
+    padding-top: 0;
+  }
+}
+
+/* Telas pequenas (Celulares) */
+@media screen and (max-width: 768px) {
+  header nav ul li {
+    display: none;
+  }
+
+  header > nav > ul {
+    flex-wrap: wrap;
+    display: hidden;
+  }
+  
+  header > nav > ul > li {
+    margin: 10px 20px;
+  }
+
+  section.hero {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  section.hero .hero_message {
+    padding-left: 5%;
+  }
+
+  section.hero .hero_message h2 {
+    font-size: 64px;
+    margin-top: 40px;
+    line-height: 1.2;
+  }
+
+  section.hero .hero_message p {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  section.hero .img {
+    height: 400px; /* Definindo altura fixa para imagem não sumir */
+  }
+
+  section.about {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  section.features .features_message h2 {
+    font-size: 80px;
+    line-height: 1;
+  }
+
+  section.features .features_message p {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  footer.footer .menu-copyright nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
