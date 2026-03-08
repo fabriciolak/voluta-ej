@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #F3E9DC;
+}
+
 header {
   width: 100%;
   height: 100px;
@@ -104,13 +108,418 @@ section.hero .hero_message button {
   cursor: pointer;
 }
 
-section.image_break{
+section.about {
+  width: 100%;
+  height: 432px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: inherit;
+}
+
+section.about .about_message {
+  width: 990px;
+  text-align: center;
+}
+
+section.about .about_message h2 {
+  font-family: 'Vina Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 72px;
+  letter-spacing: -0.027em;
+  color: #5A3A22;
+}
+
+section.about .about_message p {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: -0.027em;
+  color: #5A3A22;
+  
+  margin-top: 16px;
+}
+
+section.features {
+  width: 100%;
+  height: 850px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: inherit;
+}
+section.features .features_image {
+  height: 100%;
+}
+section.features div > img {
+  width: 100%;
+  height: 720px;
+}
+
+section.features .features_message {
+  width: 737px;
+}
+
+section.features .features_message h2 {
+  font-family: 'Vina Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 128px;
+  line-height: 112px;
+  letter-spacing: -0.027em;
+
+  color: #5A3A22;
+}
+
+section.features .features_message p {
+  width: 688px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28.4813px;
+  line-height: 43px;
+  letter-spacing: -0.027em;
+  color: #5A3A22;
+
+  margin-top: 64px;
+}
+
+section.products {
+  width: 100%;
+  height: 1040px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+
+  background-color: #5A3A22;
+}
+
+section.products h2 {
+  font-family: 'Vina Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 72px;
+  letter-spacing: -0.027em;
+
+  color: #D0AD64;
+}
+
+section.products p {
+  width: 482px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: -0.027em;
+
+  color: #D0AD64;
+  margin-bottom: 46px;
+}
+
+section.products .products_grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 64px;
+}
+
+section.products .products_grid-product {
+  width: 317px;
+  height: 428px;
+  text-align: left;
+}
+
+section.products .products_grid-product p {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: -0.027em;
+  color: #D0AD64;
+  padding-top: 16px;
+
+  text-align: left;
+}
+
+section.products button {
+  width: 317px;
+  height: 64px;
+  border-radius: 4px;
+  border: 2px solid #D0AD64;
+  background-color: transparent;
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.027em;
+  color: #D0AD64;
+  cursor: pointer;
+  
+  margin-top: 88px;
+}
+
+section.contact {
+  width: 100%;
+  height: 788px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 156px;
+}
+
+section.contact .contact_image {
+  height: 788px;
+}
+
+section.contact .contact_image img {
+  height: 100%;
+}
+
+section.contact .contact_form {
+  width: 100%;
+  height: 100%;
+  padding-top: 95px;
+}
+
+section.contact .contact_form > h2 {
+  margin-bottom: 39px;
+}
+
+section.contact .contact_form > form {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 24px;
+}
+
+section.contact .contact_form > h2 {
+  font-family: 'Vina Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 36px;
+  letter-spacing: -0.027em;
+  color: #5A3A22;
+}
+
+section.contact .contact_form .contact_form-item {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 8px;
+}
+
+section.contact .contact_form .contact_form-item > label {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.027em;
+  color: #5A3A22;
+}
+
+section.contact .contact_form-item > input, textarea {
+  width: 354px;
+  height: 48px;
+  padding: 4px 12px;
+  background-color: rgba(122, 122, 122, 0.2); 
+  border: 1px solid rgba(122, 122, 122, 0.6); 
+  border-radius: 4px;
+}
+
+section.contact .contact_form-item > input:focus, textarea:focus {
+  outline: none;
+  border: 1px solid #5A3A22; 
+  border-radius: 4px;
+}
+
+section.contact .contact_form-item > textarea {
+  height: 143px;
+}
+
+section.contact .contact_form-item-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 8px;
+}
+
+section.contact .contact_form-item-checkbox > label {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: -0.027em;
+  color: #5A3A22;
+}
+
+section.contact .contact_form-item-checkbox > label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: -0.027em;
+  color: #5A3A22;
+  cursor: pointer;
+}
+
+section.contact .contact_form-item-checkbox input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #5A3A22;
+  border-radius: 3px;
+  background-color: transparent;
+  margin: 0;
+  cursor: pointer;
+}
+
+section.contact .contact_form-item-checkbox input[type="checkbox"]:checked {
+  border: 1px solid #000;
+  padding: 2.5px;
+  background-color: #5A3A22;
+}
+
+section.contact .contact_form > form > button {
+  width: 354px;
+  height: 48px;
+  background-color: rgba(122, 122, 122, 0.2); 
+  border: 1px solid rgba(122, 122, 122, 0.6); 
+  border-radius: 4px;
+
+  font-family: "Inter", 'sans-serif';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #5A3A22;
+  cursor: pointer;
+}
+
+footer.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 32px 200px; 
+}
+
+footer.footer .social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer.footer .logo-info {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  gap: -8px;
+}
+
+footer.footer .logo-info img {
+  width: 84px;
+  height: 84px;
+}
+
+footer.footer .logo-info h2 {
+  font-family: 'Vina Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 72px;
+  letter-spacing: -0.027em;
+  color: #5A3A22;
+}
+
+
+footer.footer .logo-info p{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.027em;
+  color: #5A3A22;
+}
+
+
+
+footer.footer .menu-copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 56px;
+
+  padding-top: 118px;
+}
+
+footer.footer .menu-copyright nav ul {
+  display: flex;
+  gap: 64px;
+
+  list-style: none;
+}
+
+
+footer.footer .menu-copyright nav ul li a {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -0.027em;
+  text-transform: uppercase;
+  color: #5A3A22;
+
+  text-decoration: none;
+}
+
+footer.footer .social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+
+/* TODO: Change this later */
+
+section.image_break {
   width: 100%;
   height: 433px;
   overflow: hidden;
 }
 
-section.image_break .img img{
+section.image_break .img img {
   object-fit: cover;
 }
 
