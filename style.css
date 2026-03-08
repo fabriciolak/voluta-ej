@@ -235,6 +235,8 @@ section.products h2 {
   letter-spacing: -0.027em;
 
   color: #D0AD64;
+  z-index: 999;
+
 }
 
 section.products p {
@@ -250,6 +252,8 @@ section.products p {
 
   color: #D0AD64;
   margin-bottom: 46px;
+  z-index: 999;
+
 }
 
 section.products .products_grid {
@@ -259,6 +263,18 @@ section.products .products_grid {
   flex-direction: row;
   gap: 64px;
   flex-wrap: wrap;
+  z-index: 999;
+}
+
+section.products .folha {
+  position: absolute;
+  width: 568.52px;
+  height: 637.1px;
+  left: -66px;
+  top: 2696.48px;
+
+  transform: rotate(-7.68deg);
+  z-index: 0;
 }
 
 section.products .products_grid-product {
@@ -649,9 +665,18 @@ section.image_break .img img {
   footer.footer .menu-copyright {
     padding-top: 0;
   }
+
+  section.products .folha {
+    display: none;
+  }
 }
 
-/* Telas pequenas (Celulares) */
+@media screen and (max-width: 1288px) {
+  section.products .folha {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 768px) {
   header nav ul li {
     display: none;
@@ -710,5 +735,9 @@ section.image_break .img img {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+  }
+
+  section.products .folha {
+    display: none;
   }
 }
